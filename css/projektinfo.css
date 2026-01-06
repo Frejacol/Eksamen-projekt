@@ -1,0 +1,95 @@
+p {
+  line-height: 1.5em;
+}
+
+.padding {
+  padding-bottom: 2em;
+}
+
+img:not(.logo) {
+  max-width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+footer {
+  margin-top: 5em;
+}
+
+.button {
+  margin-top: 2em !important;
+}
+
+main a {
+  position: relative;
+  display: inline-block;
+  margin: auto !important;
+}
+
+.hover-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+
+  background: var(--color-btn-bg);
+  color: black;
+  padding: 12px 24px;
+  border: 2px solid black;
+  border-radius: 25px;
+
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+a:hover .hover-button {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+a img:hover {
+  opacity: 60%;
+}
+
+main a:hover::before {
+  opacity: 1;
+}
+
+@media (width > 600px) {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid_3-1 {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+
+  p {
+    margin-left: 3.8em !important;
+  }
+  .proces {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .procestext {
+    margin: 1em 9em !important;
+  }
+
+  main a {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    justify-content: left;
+  }
+
+  .grid_3-1 .procestext {
+    margin-right: 0 !important;
+  }
+
+  .grid_3-1 a {
+    margin-left: 0 !important;
+  }
+}

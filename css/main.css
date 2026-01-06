@@ -40,6 +40,7 @@ h2 {
   font-family: "Chicle";
   margin-top: 1.5em;
   font-size: 2em;
+  font-weight: normal;
 }
 
 h3 {
@@ -48,6 +49,7 @@ h3 {
   font-family: "Chicle";
   margin: 0 1.5em;
   font-size: 1.5em;
+  font-weight: normal;
 }
 
 h4 {
@@ -55,6 +57,7 @@ h4 {
   color: var(--color-text);
   font-family: "Chicle";
   font-size: 1.3em;
+  font-weight: normal;
 }
 
 main a {

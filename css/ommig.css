@@ -1,33 +1,84 @@
 img:not(.logo) {
-  max-width: 65%;
+  max-width: 85%;
   display: block;
   margin: 0 auto;
 }
 
-.fremhæv {
+.highlight {
   background-color: var(--color-btn-bg);
   border: 1px solid black;
   border-radius: 10px;
   color: black;
   padding: 0.5em 1em;
   text-align: center;
+  font-family: "Itim";
 }
 
 .flex {
   display: flex;
   justify-content: center;
+  gap: 0.5rem;
 }
 
 .grid_1-1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 1em;
+  align-items: start;
+  gap: 0.5rem;
 }
 
 .grid_1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 1em 1em 3em 1em;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+.softwareImg {
+  position: relative;
+  display: inline-block;
+  margin: auto !important;
+}
+
+.software-item {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.software-label {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: white;
+  color: black;
+  padding: 8px 16px;
+  border: 2px solid black;
+  border-radius: 8px;
+  font-family: "Chicle";
+  font-size: 1.2em;
+
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.software-item:hover .software-label {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.software-item:hover::before {
+  opacity: 1;
+}
+
+.software-label {
+  z-index: 2;
 }
 
 @media (width > 600px) {
@@ -81,5 +132,8 @@ img:not(.logo) {
 
   footer {
     margin-top: 5em;
+  }
+  img:not(.logo) {
+    max-width: 65%;
   }
 }

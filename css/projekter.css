@@ -6,12 +6,13 @@
 h4 {
   margin: auto 0;
   color: var(--color-header-text);
+  font-size: 2em;
 }
 
 p {
   margin: auto 0;
   color: var(--color-header-text);
-  font-size: 0.7em;
+  font-size: 1em;
 }
 
 .project {
